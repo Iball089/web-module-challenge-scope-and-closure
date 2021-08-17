@@ -52,6 +52,12 @@ function counter2() {
   return count++;
 }
 
+// 1. The function is being invoked outside on counter 1 inside on counter 2 is the only place objects can be referenced.
+   
+// 2. Because of the curly braces at the end of the function } } indicating the closure.
+
+// 3. You could use counter 1 if you wanted to access that inforamtion with global function,(even though global scope is bad).
+
 
 /* ⚾️⚾️⚾️ Task 2: inning() ⚾️⚾️⚾️
 Use the inning function below to do the following:
@@ -62,10 +68,12 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
-}
+function inning(callback){
+  return callback(Math.random() * 2);
 
+    /*Code Here*/
+  }
+console.log(inning(9));
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -83,6 +91,12 @@ Use the finalScore function below to do the following:
 
 function finalScore(/*code Here*/){
   /*Code Here*/
+  function inning(callBack){
+    return callback(Math.random() * 2);
+  
+      /*Code Here*/
+    }
+  console.log(Math.random() * 2);
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
